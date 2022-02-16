@@ -40,7 +40,7 @@
 
 ##### 1.1使用前准备 - 导入discord账户
 
-![image-20220216141513675](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/create-discord-user.jpg)
+<img src="https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/create-discord-user.jpg" alt="image-20220216141513675" style="zoom:50%;" />
 
 如图所示，**账号管理**中导入discord账号
 
@@ -373,7 +373,5 @@
 
 
 
-####4.其他事项
-
-
+#### 4.其他事项
 
