@@ -60,7 +60,7 @@
 
 ![image-20220216143033038](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/create-chat.jpg)
 
-如图所示，在**话术中心**中创建话术
+如图所示，在**数据中心**中创建话术
 
 在本系统内，为话术做了两个类别
 
@@ -83,7 +83,27 @@
 
 
 
-##### 1.3创建聊天任务
+##### 1.3使用前准备 - 导入昵称
+
+![nickname-collect](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/nickname-collect.jpg)
+
+如图所示，在**数据中心**中创建昵称
+
+目的是创建任务时，可以进行配置，打到发言n次后改变昵称的效果
+
+上传昵称文件格式如下，每一行就是要修改的昵称前缀（任务配置时，可添加固定后缀）
+
+```
+路飞
+悟空
+比克
+```
+
+若不需要修改昵称，则可以不进行该配置
+
+
+
+##### 1.4创建聊天任务
 
 ![create-task](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/create-task.jpg)
 
@@ -107,7 +127,7 @@
 
 创建完成后的任务处于**暂停状态**，此时还需要进行一些配置，才能使任务正常开始运行（需手动开启任务）
 
-##### 1.4配置聊天任务 - 基础配置
+##### 1.5配置聊天任务 - 基础配置
 
 <img src="https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/task-base-config.jpg" alt="task-base-config" style="zoom:50%;" />
 
@@ -123,7 +143,7 @@
 
 顺序发言 - 正常情况下，发言是随机的，也就是从话术里随机挑取一条；若用户对话术有比较高的设计能力，可使用该功能进行顺序发言
 
-##### 1.5配置聊天任务 - 配置任务成员
+##### 1.6配置聊天任务 - 配置任务成员
 
 ![task-user-config](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/task-user-config.jpg)
 
@@ -142,7 +162,7 @@
 
 本系统内置时间为至少60秒发言间隔，加上一定的随机等待
 
-##### 1.6配置聊天任务 - 高级配置
+##### 1.7配置聊天任务 - 高级配置
 
 ![task-advance-config](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/task-advance-config.jpg)
 
@@ -212,7 +232,29 @@
 
 
 
-##### 1.7聊天任务 - 其他配置
+##### 1.8聊天任务配置 - 昵称修改配置
+
+![nickname-config](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/nickname-config.jpg)
+
+
+
+|      参数      |         含义         | 是否为空 | 示例 |
+| :------------: | :------------------: | :------: | :--: |
+|    昵称集合    |    上传的昵称列表    |   非空   |      |
+|    昵称后缀    | 改变昵称时的固定后缀 |   非空   |      |
+| 触发改名发言数 |  发言n次后触发改名   |   非空   |      |
+
+修改昵称需要在**1.1导入discord账户**中配置密码
+
+改昵称是有限制的，改的太快会被系统拒绝，这边建议发言10-20分钟改名一次，根据你设置的发言间隔来定**触发改名发言次数**
+
+比如 15分钟/1分钟 = 15 即，将触发改名发言数设置为15
+
+当然，如果不需要修改昵称，则不可以进行配置，该项配置不是必须的，只是为了更好的避免被识别出来
+
+
+
+##### 1.9聊天任务 - 其他配置
 
 ![other-config](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/other-config.jpg)
 
@@ -222,7 +264,7 @@
 
 
 
-##### 1.8聊天任务 - 任务执行详情
+##### 1.9聊天任务 - 任务执行详情
 
 ![task-execute](https://fy-content-image.oss-cn-hangzhou.aliyuncs.com/task-execute.jpg)
 
